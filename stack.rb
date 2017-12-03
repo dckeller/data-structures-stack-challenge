@@ -1,3 +1,7 @@
+require_relative 'fixed_array'
+require_relative 'array_list.rb'
+
+
 class Stack
 
 	def initialize
@@ -5,12 +9,11 @@ class Stack
 	end
 
 	def push(element)
-		@array.push(element)
+		ArrayList.add(element)
 	end
 
 	def pop
-		@array.pop
-		@array
+		LinkedList.remove_first
 	end
 
 	def top
@@ -22,3 +25,4 @@ class Stack
 	end  
 
 end
+
